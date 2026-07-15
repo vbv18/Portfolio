@@ -31,12 +31,10 @@ contactRouter.post(
         .json({ message: "Message sent — thanks for reaching out." });
     } catch (error) {
       console.error("Failed to send contact email:", error);
-      return res
-        .status(502)
-        .json({
-          message:
-            "Could not send your message right now. Please try again shortly.",
-        });
+      return res.status(502).json({
+        message:
+          "Could not send your message right now. Please try again shortly.",
+      });
     }
   },
 );
