@@ -31,6 +31,7 @@ const Achievements = lazy(() =>
     default: m.Achievements,
   })),
 );
+const Contact = lazy(() => import('@/components/sections/Contact').then((m) => ({ default: m.Contact })));
 
 export default function App() {
   return (
@@ -57,6 +58,9 @@ export default function App() {
         </Suspense>
         <Suspense fallback={<SectionFallback />}>
           <Achievements />
+        </Suspense>
+        <Suspense fallback={<SectionFallback />}>
+          <Contact />
         </Suspense>
       </main>
 
