@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, ArrowDownToLine } from "lucide-react";
 import { navLinks } from "@/data/nav";
 import { profile } from "@/data/profile";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { Button } from "@/components/ui/button";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { scrollToId } from "@/utils/dom";
@@ -39,10 +39,13 @@ export function Header() {
       <div className="container-page flex h-16 items-center justify-between">
         <button
           onClick={() => scrollToId("hero")}
-          className="font-display text-sm font-semibold tracking-tight text-ink"
-          aria-label="Go to top"
+          className="group relative overflow-hidden rounded-md px-2 py-1 font-display text-lg font-bold tracking-tight text-ink cursor-pointer"
         >
-          Vaibhav<span className="text-accent">.</span>Garg
+          <span className="relative z-10">
+            Vaibhav Garg
+          </span>
+
+          <span className="absolute bottom-0 left-0 h-[2px] w-full -translate-x-full bg-accent transition-transform duration-500 group-hover:translate-x-0" />
         </button>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -54,7 +57,7 @@ export function Header() {
                 key={link.href}
                 onClick={() => handleNav(link.href)}
                 className={cn(
-                  "relative px-3.5 py-2 text-sm transition-colors",
+                  "relative px-3.5 py-2 text-sm transition-colors cursor-pointer",
                   isActive ? "text-ink" : "text-muted hover:text-ink",
                 )}
               >

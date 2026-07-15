@@ -11,12 +11,5 @@
   "compilerOptions": {
     "rootDir": "./src",
     "outDir": "./dist",
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "./src/*"
-      ],
-    },
   },
 }

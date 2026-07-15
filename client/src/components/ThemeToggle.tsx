@@ -20,7 +20,7 @@ export function ThemeToggle() {
         type="button"
         onClick={nextTheme}
         aria-label={`Switch theme, currently ${theme}`}
-        className="flex h-9 w-9 items-center justify-center rounded-sm border border-border text-ink transition-colors hover:border-accent hover:text-accent"
+        className="flex h-9 w-9 items-center justify-center rounded-sm border border-border text-ink transition-colors hover:border-accent hover:text-accent cursor-pointer"
       >
         <Icon size={16} strokeWidth={1.75} />
       </button>
