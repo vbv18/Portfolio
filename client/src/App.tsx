@@ -31,7 +31,9 @@ const Achievements = lazy(() =>
     default: m.Achievements,
   })),
 );
-const Contact = lazy(() => import('@/components/sections/Contact').then((m) => ({ default: m.Contact })));
+const Contact = lazy(() =>
+  import("@/components/sections/Contact").then((m) => ({ default: m.Contact })),
+);
 
 export default function App() {
   return (

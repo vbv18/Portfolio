@@ -63,9 +63,9 @@ export interface AboutCard {
 }
 
 export type ContactFormValues = {
-  name: string
-  email: string
-  subject: string
-  message: string
-  company?: string
-}
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+  company?: string;
+};

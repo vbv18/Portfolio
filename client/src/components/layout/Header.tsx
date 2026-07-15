@@ -41,9 +41,7 @@ export function Header() {
           onClick={() => scrollToId("hero")}
           className="group relative overflow-hidden rounded-md px-2 py-1 font-display text-lg font-bold tracking-tight text-ink cursor-pointer"
         >
-          <span className="relative z-10">
-            Vaibhav Garg
-          </span>
+          <span className="relative z-10">Vaibhav Garg</span>
 
           <span className="absolute bottom-0 left-0 h-[2px] w-full -translate-x-full bg-accent transition-transform duration-500 group-hover:translate-x-0" />
         </button>

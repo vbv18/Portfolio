@@ -1,25 +1,25 @@
-import nodemailer from 'nodemailer'
-import { env } from './env.js'
+import nodemailer from "nodemailer";
+import { env } from "./env.js";
 
 export const transporter = nodemailer.createTransport({
   host: env.SMTP_HOST,
   port: Number(env.SMTP_PORT),
-  secure: env.SMTP_SECURE === 'true',
+  secure: env.SMTP_SECURE === "true",
   auth: {
     user: env.SMTP_USER,
     pass: env.SMTP_PASS,
   },
-})
+});
 
 export interface ContactPayload {
-  name: string
-  email: string
-  subject: string
-  message: string
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 }
 
 export async function sendContactEmail(payload: ContactPayload) {
-  const { name, email, subject, message } = payload
+  const { name, email, subject, message } = payload;
 
   await transporter.sendMail({
     from: `"Portfolio Contact Form" <${env.CONTACT_FROM_EMAIL}>`,
@@ -35,14 +35,14 @@ export async function sendContactEmail(payload: ContactPayload) {
         <p style="white-space: pre-wrap;">${escapeHtml(message)}</p>
       </div>
     `,
-  })
+  });
 }
 
 function escapeHtml(input: string) {
   return input
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;')
-    .replace(/'/g, '&#039;')
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
 }
