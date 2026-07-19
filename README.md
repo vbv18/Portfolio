@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  <img src="./public/preview.png" alt="Portfolio Preview" width="100%">
+  <img src="./docs/images/preview.png" alt="Portfolio Preview" width="100%">
 </p>
 
 This repository contains the source code for my personal portfolio website, where I showcase my projects, technical skills, internship experience, achievements, and contact information. My work primarily focuses on AI-powered applications, scalable backend systems, secure authentication, and modern full-stack development.

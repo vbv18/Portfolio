@@ -29,7 +29,7 @@ export const skillCategories: SkillCategory[] = [
     id: "ai",
     eyebrow: "05",
     title: "AI / LLMs",
-    items: ["Gemini API", "LLM Integration", "Prompt Engineering"],
+    items: ["Vercel AI SDK", "Gemini API", "LLM Integration", "Prompt Engineering"],
   },
   {
     id: "tools",

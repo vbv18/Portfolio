@@ -14,8 +14,8 @@ export const experience: ExperienceItem[] = [
     location: "Ghaziabad",
     period: "Jun '25",
     points: [
-      "Analyzed and decoded ASTERIX CAT048 radar packets to study aviation communication protocols.",
-      "Studied structured packet formats and real-time data processing in surveillance systems.",
+      "Decoded ASTERIX CAT048 radar surveillance packets using Wireshark and ASTERIX Inspector, cross-referencing internal protocol documentation and a C-based bitstream parser.",
+      "Studied real-time data flow and structured packet formats used in aviation surveillance systems.",
     ],
   },
 ];
