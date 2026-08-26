@@ -25,7 +25,7 @@ export const education: EducationItem[] = [
     id: "btech",
     degree: "B.Tech, Electronics & Communication Engineering",
     institute: "The LNM Institute of Information Technology, Jaipur",
-    score: "7.75 CGPA",
+    score: "7.81 CGPA",
     period: "Aug 2023 – Present",
   },
   {
@@ -67,9 +67,9 @@ export const achievements: AchievementItem[] = [
     title: "AIR 2217 in GATE 2026, Electronics & Communication",
   },
   {
-    id: "chipin",
-    title: "Top 12 finalist, ChipIN Design Hackathon 2025 (MeitY)",
-    detail: "Sponsored by Synopsys & AMD",
+    id: "odoo-hackathon",
+    title: "Odoo Hackathon Finalists - Ranked 150 out of 20,000 teams.",
+    detail: "To be held on 5-6 September",
   },
   {
     id: "lnmiit-rank",
@@ -80,6 +80,11 @@ export const achievements: AchievementItem[] = [
     id: "elitmus",
     title: "Top 70 of 400 participants",
     detail: "eLitmus assessment at LNMIIT",
+  },
+  {
+    id: "chipin",
+    title: "Top 12 finalist, ChipIN Design Hackathon 2025 (MeitY)",
+    detail: "Sponsored by Synopsys & AMD",
   },
   {
     id: "jee",
@@ -93,7 +98,7 @@ export const aboutCards: AboutCard[] = [
     id: "education",
     title: "Education",
     description:
-      "B.Tech in Electronics & Communication Engineering at LNMIIT Jaipur, 7.75 CGPA.",
+      "B.Tech in Electronics & Communication Engineering at LNMIIT Jaipur, 7.81 CGPA.",
     icon: "GraduationCap",
   },
   {
