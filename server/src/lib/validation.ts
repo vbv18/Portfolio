@@ -9,3 +9,22 @@ export const contactSchema = z.object({
 });
 
 export type ContactInput = z.infer<typeof contactSchema>;
+
+export const terminalMessageSchema = z.object({
+  message: z
+    .string()
+    .trim()
+    .min(1, "Please enter a question or command.")
+    .max(500, "Message cannot exceed 500 characters."),
+  history: z
+    .array(
+      z.object({
+        role: z.enum(["user", "model", "assistant"]),
+        content: z.string().trim().min(1).max(2000),
+      }),
+    )
+    .max(10, "History is limited to the last 10 messages.")
+    .optional(),
+});
+
+export type TerminalMessageInput = z.infer<typeof terminalMessageSchema>;

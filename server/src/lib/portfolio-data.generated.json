@@ -1,0 +1,275 @@
+{
+  "profile": {
+    "name": "Vaibhav Garg",
+    "role": "AI Full-Stack Developer",
+    "location": "Jaipur, India",
+    "email": "23uec638@lnmiit.ac.in",
+    "linkedin": "https://linkedin.com/in/vbvgarg",
+    "linkedinLabel": "linkedin.com/in/vbvgarg",
+    "github": "https://github.com/vbv18",
+    "githubLabel": "github.com/vbv18",
+    "institute": "The LNM Institute of Information Technology, Jaipur",
+    "degree": "B.Tech, Electronics & Communication Engineering",
+    "tagline": "I build production-ready applications end to end — from typed backends and auth systems to AI-integrated product experiences.",
+    "status": "Open to Software Engineering & AI Engineering roles"
+  },
+  "projects": [
+    {
+      "id": "forge-ai",
+      "title": "Forge AI",
+      "tagline": "AI-powered React application builder",
+      "duration": "Jun '26 – Jul '26",
+      "tech": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "Supabase",
+        "Clerk",
+        "Prisma",
+        "Gemini API",
+        "Vercel AI SDK",
+        "Sandpack",
+        "Arcjet"
+      ],
+      "overview": "A full-stack AI application builder that turns natural language prompts into production-ready, multi-file React projects, with live sandboxed previews, streaming AI responses, and persistent workspaces.",
+      "highlights": [
+        "Architected a real-time code generation pipeline with the Gemini API and Vercel AI SDK, supporting image-assisted prompting, structured multi-file project generation, and conversational AI-driven code refinement.",
+        "Built a scalable backend with Prisma, PostgreSQL, and Supabase for project persistence and credit-based subscription management.",
+        "Secured APIs with Clerk authentication, role-based authorization, and Arcjet rate limiting to prevent abuse."
+      ],
+      "impact": "Turns a natural-language prompt into a runnable, multi-file React app with a live in-browser preview.",
+      "githubUrl": "https://github.com/vbv18/Forge",
+      "liveUrl": "https://forge-vbv18.vercel.app/"
+    },
+    {
+      "id": "auth-system",
+      "title": "Production Authentication Service",
+      "tagline": "Production-grade JWT auth backend",
+      "duration": "May '26",
+      "tech": [
+        "Node.js",
+        "Express.js",
+        "TypeScript",
+        "MongoDB",
+        "JWT",
+        "Zod"
+      ],
+      "overview": "A modular, feature-based authentication backend with reusable middleware, centralized error handling, and type-safe request validation using Zod.",
+      "highlights": [
+        "Implemented full auth workflows — register, login, refresh, logout, logout-all — using JWT access tokens, rotating refresh tokens, HTTP-only cookies, and hashed token storage.",
+        "Secured REST endpoints with layered middleware and centralized error handling.",
+        "Hardened sessions with refresh token rotation, replay attack detection, concurrent session limits, and MongoDB TTL indexes."
+      ],
+      "impact": "Supports single-device and multi-device logout with replay-attack-resistant session rotation.",
+      "githubUrl": "https://github.com/vbv18/auth-template-ts"
+    }
+  ],
+  "skills": [
+    {
+      "id": "languages",
+      "eyebrow": "01",
+      "title": "Languages",
+      "items": [
+        "TypeScript",
+        "JavaScript",
+        "Python",
+        "C/C++",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": "frontend",
+      "eyebrow": "02",
+      "title": "Frontend",
+      "items": [
+        "React.js",
+        "Next.js",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "id": "backend",
+      "eyebrow": "03",
+      "title": "Backend",
+      "items": [
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "JWT Authentication"
+      ]
+    },
+    {
+      "id": "databases",
+      "eyebrow": "04",
+      "title": "Databases & ORM",
+      "items": [
+        "PostgreSQL",
+        "MongoDB",
+        "Supabase",
+        "Prisma",
+        "Mongoose"
+      ]
+    },
+    {
+      "id": "ai",
+      "eyebrow": "05",
+      "title": "AI / LLMs",
+      "items": [
+        "Vercel AI SDK",
+        "Gemini API",
+        "LLM Integration",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "id": "tools",
+      "eyebrow": "06",
+      "title": "Developer Tools",
+      "items": [
+        "Git",
+        "GitHub",
+        "Postman",
+        "Clerk",
+        "Arcjet",
+        "Turborepo",
+        "Zod"
+      ]
+    },
+    {
+      "id": "core-cs",
+      "eyebrow": "07",
+      "title": "Core CS",
+      "items": [
+        "Data Structures & Algorithms",
+        "Object-Oriented Programming",
+        "DBMS",
+        "Operating Systems",
+        "Computer Networks"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "bel",
+      "role": "Internship Trainee",
+      "org": "Bharat Electronics Limited (BEL)",
+      "location": "Ghaziabad",
+      "period": "Jun '25",
+      "points": [
+        "Decoded ASTERIX CAT048 radar surveillance packets using Wireshark and ASTERIX Inspector, cross-referencing internal protocol documentation and a C-based bitstream parser.",
+        "Studied real-time data flow and structured packet formats used in aviation surveillance systems."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": "btech",
+      "degree": "B.Tech, Electronics & Communication Engineering",
+      "institute": "The LNM Institute of Information Technology, Jaipur",
+      "score": "7.81 CGPA",
+      "period": "Aug 2023 – Present"
+    },
+    {
+      "id": "xii",
+      "degree": "Senior Secondary (XII)",
+      "institute": "NKBR Academy, Meerut",
+      "score": "92.80%",
+      "period": "2023"
+    },
+    {
+      "id": "x",
+      "degree": "Secondary (X)",
+      "institute": "K. L. International School, Meerut",
+      "score": "95.80%",
+      "period": "2021"
+    }
+  ],
+  "certifications": [
+    {
+      "id": "tcs-ion",
+      "title": "Career Edge - Young Professional, Certificate of Achievement",
+      "issuer": "TCS iON",
+      "date": "Jul '25",
+      "href": "https://drive.google.com/file/d/1y1HxZtihtyvOZ3gge3eCva5aFOetqpt7/view?usp=drive_link"
+    },
+    {
+      "id": "c-programming",
+      "title": "Certification in C Programming Language",
+      "issuer": "Nav Bharat Institute of Technology",
+      "date": "Jul '23",
+      "href": "https://drive.google.com/file/d/1L1Lop-4Pglo68z2REYDvjc2S43Ar656B/view?usp=drive_link"
+    }
+  ],
+  "achievements": [
+    {
+      "id": "gate",
+      "title": "AIR 2217 in GATE 2026, Electronics & Communication"
+    },
+    {
+      "id": "odoo-hackathon",
+      "title": "Odoo Hackathon Finalists - Ranked 150 out of 20,000 teams.",
+      "detail": "To be held on 5-6 September"
+    },
+    {
+      "id": "lnmiit-rank",
+      "title": "Top 7% of students at LNMIIT",
+      "detail": "By academic performance"
+    },
+    {
+      "id": "elitmus",
+      "title": "Top 70 of 400 participants",
+      "detail": "eLitmus assessment at LNMIIT"
+    },
+    {
+      "id": "chipin",
+      "title": "Top 12 finalist, ChipIN Design Hackathon 2025 (MeitY)",
+      "detail": "Sponsored by Synopsys & AMD"
+    },
+    {
+      "id": "jee",
+      "title": "96.20 percentile, JEE Main 2023",
+      "detail": "99.21 percentile in Physics"
+    }
+  ],
+  "aboutCards": [
+    {
+      "id": "education",
+      "title": "Education",
+      "description": "B.Tech in Electronics & Communication Engineering at LNMIIT Jaipur, 7.81 CGPA.",
+      "icon": "GraduationCap"
+    },
+    {
+      "id": "focus",
+      "title": "Current Focus",
+      "description": "Shipping AI-integrated full-stack products — from streaming LLM APIs to production auth systems.",
+      "icon": "Target"
+    },
+    {
+      "id": "backend",
+      "title": "Backend Development",
+      "description": "Type-safe REST APIs, JWT auth, session security, and relational + document databases.",
+      "icon": "Server"
+    },
+    {
+      "id": "ai-engineering",
+      "title": "AI Engineering",
+      "description": "Integrating LLMs like Gemini into real products: streaming generation, prompting, structured output.",
+      "icon": "Sparkles"
+    },
+    {
+      "id": "problem-solving",
+      "title": "Problem Solving",
+      "description": "Strong CS fundamentals — DSA, OOP, DBMS, OS, Computer Networks — applied to real systems.",
+      "icon": "Puzzle"
+    },
+    {
+      "id": "interests",
+      "title": "Interests",
+      "description": "Electronics-rooted engineer exploring where signal processing, systems, and AI intersect.",
+      "icon": "Radio"
+    }
+  ],
+  "lastSyncedAt": "2026-08-26T18:59:47.099Z"
+}

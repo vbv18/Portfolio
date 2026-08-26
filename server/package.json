@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "sync-data": "node scripts/sync-data.js",
+    "prebuild": "node scripts/sync-data.js",
     "build": "tsc -b",
+    "predev": "node scripts/sync-data.js",
     "dev": "tsc -b && node dist/index.js",
     "format": "prettier --write \"**/*.{ts,md}\""
   },
@@ -13,6 +16,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@google/genai": "^2.19.0",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",

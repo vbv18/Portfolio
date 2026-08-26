@@ -3,6 +3,7 @@ import cors from "cors";
 import helmet from "helmet";
 import { env } from "./lib/env.js";
 import { contactRouter } from "./routes/contact.js";
+import { terminalRouter } from "./routes/terminal.js";
 
 const app = express();
 
@@ -19,7 +20,8 @@ app.get("/api/health", (_req, res) => {
   res.json({ ok: true });
 });
 
-app.use("/api", contactRouter);
+app.use("/api/contact", contactRouter);
+app.use("/api/terminal", terminalRouter);
 
 app.use((_req, res) => {
   res.status(404).json({ message: "Not found" });
@@ -27,5 +29,7 @@ app.use((_req, res) => {
 
 const port = Number(env.PORT);
 app.listen(port, () => {
-  console.log(`Contact API listening on http://localhost:${port}`);
+  console.log(
+    `Portfolio API (Contact & AI Terminal) listening on http://localhost:${port}`,
+  );
 });

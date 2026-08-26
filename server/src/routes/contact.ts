@@ -6,7 +6,7 @@ import { contactRateLimiter } from "../middleware/rate-limiter.js";
 export const contactRouter = Router();
 
 contactRouter.post(
-  "/contact",
+  "/",
   contactRateLimiter,
   async (req: Request, res: Response) => {
     const parsed = contactSchema.safeParse(req.body);
