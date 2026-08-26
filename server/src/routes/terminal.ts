@@ -45,7 +45,7 @@ terminalRouter.get("/info", (_req: Request, res: Response) => {
   });
 });
 
-// POST /api/terminal - Grounded Q&A via Gemini API
+// POST /api/terminal - Grounded Q&A via Gemini Interactions API
 terminalRouter.post(
   "/",
   terminalRateLimiter,
@@ -70,45 +70,48 @@ terminalRouter.post(
     }
 
     try {
-      // Format chat history turns for Gemini SDK
-      // Gemini expects role: "user" | "model"
-      const formattedHistory = history.slice(-6).map((item) => ({
-        role:
-          item.role === "assistant" || item.role === "model" ? "model" : "user",
-        parts: [{ text: item.content }],
+      // Build typed interaction steps for conversation history
+      const inputSteps = history.slice(-6).map((item) => ({
+        type:
+          item.role === "user"
+            ? ("user_input" as const)
+            : ("model_output" as const),
+        content: [{ type: "text" as const, text: item.content }],
       }));
 
-      const contents = [
-        ...formattedHistory,
-        { role: "user", parts: [{ text: message }] },
-      ];
+      // Append current user message
+      inputSteps.push({
+        type: "user_input" as const,
+        content: [{ type: "text" as const, text: message }],
+      });
 
-      const systemInstruction = getDynamicSystemPrompt();
+      const model = env.GEMINI_MODEL || "gemini-3.5-flash-lite";
 
-      // Invoke Gemini model with strict grounding
-      const response = await ai.models.generateContent({
-        model: env.GEMINI_MODEL || "gemini-2.5-flash",
-        contents,
-        config: {
-          systemInstruction,
-          temperature: 0.2,
-          maxOutputTokens: 1000,
+      // Invoke Gemini model via Interactions API with strict grounding
+      const interaction = await ai.interactions.create({
+        model,
+        system_instruction: getDynamicSystemPrompt(),
+        input: inputSteps,
+        store: false,
+        generation_config: {
+          max_output_tokens: 1000,
+          thinking_level: "low",
         },
       });
 
       const replyText =
-        response.text?.trim() ||
+        interaction.output_text?.trim() ||
         "I was unable to generate a response. Please try rephrasing your question.";
 
       return res.status(200).json({
         reply: replyText,
-        model: env.GEMINI_MODEL || "gemini-2.5-flash",
+        model,
       });
     } catch (error: unknown) {
       // Safe error logging without exposing secrets
       const errorMessage =
         error instanceof Error ? error.message : "Unknown Gemini API error";
-      console.error("❌ Gemini API terminal error:", errorMessage);
+      console.error("❌ Gemini Interactions API terminal error:", errorMessage);
 
       if (
         errorMessage.includes("API_KEY_INVALID") ||

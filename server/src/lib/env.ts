@@ -5,7 +5,7 @@ const envSchema = z.object({
   PORT: z.string().default("4000"),
   CLIENT_ORIGIN: z.string().default("http://localhost:5173"),
   GEMINI_API_KEY: z.string().optional().default(""),
-  GEMINI_MODEL: z.string().default("gemini-2.5-flash"),
+  GEMINI_MODEL: z.string().default("gemini-3.5-flash-lite"),
   SMTP_HOST: z.string().default("smtp.gmail.com"),
   SMTP_PORT: z.string().default("587"),
   SMTP_SECURE: z.string().default("false"),
