@@ -11,7 +11,8 @@ app.use(helmet());
 app.use(
   cors({
     origin: env.CLIENT_ORIGIN.split(",").map((o) => o.trim()),
-    methods: ["GET", "POST"],
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    credentials: true,
   }),
 );
 app.use(express.json({ limit: "20kb" }));
@@ -29,7 +30,5 @@ app.use((_req, res) => {
 
 const port = Number(env.PORT);
 app.listen(port, () => {
-  console.log(
-    `Portfolio API (Contact & AI Terminal) listening on http://localhost:${port}`,
-  );
+  console.log(`Portfolio Server is listening on http://localhost:${port}`);
 });
