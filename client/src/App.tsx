@@ -1,9 +1,10 @@
 import { Header } from "@/components/layout/Header";
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useState } from "react";
 import { Hero } from "@/components/sections/Hero";
 import { Footer } from "./components/layout/Footer";
 import { ScrollProgress } from "@/components/layout/ScrollProgress";
 import { Toaster } from "sonner";
+import { TerminalLauncher } from "@/components/terminal/TerminalLauncher";
 
 const About = lazy(() =>
   import("@/components/sections/About").then((m) => ({ default: m.About })),
@@ -34,8 +35,14 @@ const Achievements = lazy(() =>
 const Contact = lazy(() =>
   import("@/components/sections/Contact").then((m) => ({ default: m.Contact })),
 );
+const TerminalModal = lazy(() =>
+  import("@/components/terminal/TerminalModal").then((m) => ({
+    default: m.TerminalModal,
+  })),
+);
 
 export default function App() {
+  const [terminalOpen, setTerminalOpen] = useState(false);
   return (
     <>
       <ScrollProgress />
@@ -67,6 +74,18 @@ export default function App() {
       </main>
 
       <Footer />
+
+      <TerminalLauncher
+        isOpen={terminalOpen}
+        onToggle={() => setTerminalOpen((prev) => !prev)}
+      />
+
+      <Suspense fallback={null}>
+        <TerminalModal
+          isOpen={terminalOpen}
+          onClose={() => setTerminalOpen(false)}
+        />
+      </Suspense>
 
       <Toaster
         position="bottom-right"
